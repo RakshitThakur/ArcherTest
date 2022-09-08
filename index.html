@@ -7,7 +7,8 @@
   </head>
   <body style="text-align: center">
     <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="960px" width="600px"></canvas>
-   
+    <script src="Build/RakshitThakur.github.io.loader.js"></script>
+
     var canvas = document.getElementById('canvas');
     var ratio = canvas.width / canvas.height;
    
@@ -16,7 +17,7 @@
  
     canvas.style.position = "absolute";
     canvas.style.left = ((window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth) / 2 - canvas.width / 2) + "px";  
-    <script src="Build/RakshitThakur.github.io.loader.js"></script>
+   
     <script>
       createUnityInstance(document.querySelector("#unity-canvas"), {
         dataUrl: "Build/RakshitThakur.github.io.data",
@@ -26,7 +27,7 @@
         companyName: "DefaultCompany",
         productName: "Turning Car",
         productVersion: "0.1",
-        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        matchWebGLToCanvasSize: true, // Uncomment this to separately control WebGL canvas render size and DOM element size.
         // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
       });
     </script>
