@@ -6,23 +6,10 @@
     <title>Unity WebGL Player | Turning Car</title>
   </head>
   <body style="text-align: center">
-    <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="960px" width="600px"></canvas>
-   
-    <script type='text/javascript'>
-   
-    var canvas = document.getElementById('canvas');
-    var ratio = canvas.width / canvas.height;
-   
-    canvas.height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-    canvas.width = canvas.height * ratio;
- 
-    canvas.style.position = "absolute";
-    canvas.style.left = ((window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth) / 2 - canvas.width / 2) + "px";     
-   
-    </script>
-     <script src="Build/RakshitThakur.github.io.loader.js"></script>
+    <canvas id="unity-canvas" width=1080 height=1920 style="width: 1080px; height: 1920px; background: #231F20"></canvas>
+    <script src="Build/RakshitThakur.github.io.loader.js"></script>
     <script>
-      createUnityInstance(document.querySelector("#emscripten"), {
+      createUnityInstance(document.querySelector("#unity-canvas"), {
         dataUrl: "Build/RakshitThakur.github.io.data",
         frameworkUrl: "Build/RakshitThakur.github.io.framework.js",
         codeUrl: "Build/RakshitThakur.github.io.wasm",
