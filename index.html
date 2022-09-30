@@ -115,14 +115,14 @@
     </script>
 
     <script>
-      const PauseGame=()=>
+      window.PauseGame = function()
       {
         if(myGameInstance!= null)
         {
           myGameInstance.SendMessage("GameManager", "PauseGame");
         }
       }
-      const ResumeGame=()=>
+      window.ResumeGame=function()
       {
         if(myGameInstance != null)
         {
