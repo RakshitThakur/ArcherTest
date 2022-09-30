@@ -106,7 +106,6 @@
           progressBarFull.style.width = 100 * progress + "%";
         }).then((unityInstance) => {
           myGameInstance = unityInstance;
-          unityInstance.SendMessage("GameManager", "PauseGame");
           loadingBar.style.display = "none";
         }).catch((message) => {
           alert(message);
@@ -118,7 +117,7 @@
         console.log("instance " + myGameInstance)
         if(myGameInstance!= null)
         { 
-          myGameInstance.SendMessage("GameManager", "PauseGame");
+          myGameInstance.SendMessage("GameManager", "PauseGameDoss");
         }
       }
       window.ResumeGame=function()
